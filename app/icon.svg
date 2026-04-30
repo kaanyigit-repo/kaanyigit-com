@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .fg { fill: #1a1612; }
+    .accent { fill: #c87639; }
+    @media (prefers-color-scheme: dark) {
+      .fg { fill: #e8e2d4; }
+    }
+  </style>
+  <text class="fg" x="3" y="26" font-family="'Fraunces', Georgia, 'Times New Roman', serif" font-size="26" font-weight="500">K</text>
+  <circle class="accent" cx="26" cy="24" r="3" />
+</svg>
