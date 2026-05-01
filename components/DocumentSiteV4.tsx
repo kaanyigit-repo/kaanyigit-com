@@ -187,31 +187,30 @@ export function DocumentSiteV4({ photoUrl = "/portrait.jpg" }: Props) {
               <span className="doc4-step-tag">01 · Platform</span>
               <h3>Keep the analytics platform running, then make it better</h3>
               <p>
-                I work on <strong>FinGas</strong>, the analytics platform our traders and analysts
-                use across three offices, and I&apos;m driving its migration to Azure Container
-                Apps with a modern CI/CD pipeline. The data side is Snowflake pipelines that ingest
-                millions of rows daily from Enverus, LSEG, Kpler and a handful of third-party APIs.
+                I work on the desk&apos;s analytics platform that traders and analysts use
+                across multiple offices, and I&apos;m driving its migration to Azure Container
+                Apps with a modern CI/CD pipeline. The data side is Snowflake pipelines that
+                ingest daily feeds from third-party commodity data vendors.
               </p>
             </div>
             <div className="doc4-step s2">
               <span className="doc4-step-tag">02 · Strategy</span>
               <h3>Pressure-test seasonal trading ideas before they touch capital</h3>
               <p>
-                The desk surfaces seasonal hypotheses like storage arb, weather-driven demand
-                bumps, and basis between hubs. I run them through the backtesting DSL we built
-                (see card 01) to see how they actually held up. The win is usually killing an
-                idea cheaply, not finding a winner.
+                The desk surfaces fundamental and seasonal hypotheses, and I run them through
+                the backtesting DSL we built (see card 01) to see how they actually held up.
+                The win is usually killing an idea cheaply, not finding a winner.
               </p>
             </div>
             <div className="doc4-step s3">
               <span className="doc4-step-tag">03 · ML &amp; Agents</span>
               <h3>Anomaly detection and research agents</h3>
               <p>
-                I built an anomaly detection system covering 216 natural gas pipelines in North
-                America that flags unusual flow patterns the desk can investigate. I&apos;m also
-                building Azure AI Foundry research agents (LangGraph + MCP) that compile a daily
-                briefing on selected oil-producing regions. Still calibrating what the desk
-                actually trusts.
+                I built an ML-based anomaly detection system on North American natural gas
+                pipeline flows that flags unusual patterns for desk investigation. I&apos;m also
+                building Azure AI Foundry research agents (LangGraph + MCP) that compile a
+                daily briefing on selected oil-producing regions. Still calibrating what the
+                desk actually trusts.
               </p>
             </div>
           </div>
@@ -233,31 +232,29 @@ export function DocumentSiteV4({ photoUrl = "/portrait.jpg" }: Props) {
               </div>
               <p>
                 I build the production code, data pipelines, and ML systems behind the desk.
-                The day-to-day is <strong>FinGas</strong>, the analytics platform 100+ traders
-                use across NY, London, and Düsseldorf, and the Snowflake pipelines that feed it
-                (Enverus, LSEG, Kpler, millions of rows daily on production, storage, and
-                pipeline flows).
+                The day-to-day is the analytics platform traders use across NY, London, and
+                Düsseldorf, and the Snowflake pipelines that feed it from third-party
+                commodity data vendors covering production, storage, and pipeline flows.
               </p>
               <p>
                 On top of that sits the work I find more interesting: an ML anomaly detector
-                across <strong>216 North American gas pipelines</strong> that flags flow shifts
-                the desk investigates for basis and locational trading, a typed{" "}
-                <strong>backtesting DSL</strong> the desk uses to kill bad seasonal ideas before
-                they touch capital, and Azure AI Foundry research agents (LangGraph + MCP)
-                compiling daily briefings on key oil-producing regions.
+                on North American natural gas pipeline flows that flags shifts for desk
+                investigation, a typed <strong>backtesting DSL</strong> the desk uses to test
+                ideas cheaply before they touch capital, and Azure AI Foundry research agents
+                (LangGraph + MCP) compiling daily briefings on key oil-producing regions.
               </p>
               <div className="doc4-card-stats">
                 <div className="doc4-stat">
-                  <span className="doc4-stat-k">Pipelines</span>
-                  <span className="doc4-stat-v">216</span>
-                </div>
-                <div className="doc4-stat">
-                  <span className="doc4-stat-k">Traders</span>
-                  <span className="doc4-stat-v">100+</span>
+                  <span className="doc4-stat-k">Stack</span>
+                  <span className="doc4-stat-v">Python · Snowflake · Azure</span>
                 </div>
                 <div className="doc4-stat">
                   <span className="doc4-stat-k">Offices</span>
                   <span className="doc4-stat-v">NY · LDN · DUS</span>
+                </div>
+                <div className="doc4-stat">
+                  <span className="doc4-stat-k">Year</span>
+                  <span className="doc4-stat-v">2025–present</span>
                 </div>
               </div>
               <span className="doc4-card-internal">
@@ -468,11 +465,11 @@ export function DocumentSiteV4({ photoUrl = "/portrait.jpg" }: Props) {
               <span className="doc4-stack-k">Markets</span>
               <div className="doc4-stack-v">
                 {[
-                  "NA Natural Gas",
-                  "European TTF",
-                  "LNG Flows",
-                  "Storage",
-                  "Basis & Calendar Spreads",
+                  "Natural Gas Markets",
+                  "European Gas",
+                  "LNG Trade Flows",
+                  "Storage Dynamics",
+                  "Energy Fundamentals",
                   "Weather",
                 ].map((t) => (
                   <span key={t} className="doc4-tag">

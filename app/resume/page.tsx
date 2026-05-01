@@ -56,11 +56,11 @@ const ML_STACK = [
 ];
 
 const MARKETS = [
-  "NA Natural Gas",
-  "European TTF",
-  "LNG Flows",
-  "Storage",
-  "Basis & Calendar Spreads",
+  "Natural Gas Markets",
+  "European Gas",
+  "LNG Trade Flows",
+  "Storage Dynamics",
+  "Energy Fundamentals",
   "Limit Order Book",
 ];
 
@@ -112,27 +112,25 @@ export default function ResumePage() {
               </div>
               <ul className="doc4-cv-list">
                 <li>
-                  Leading migration of the FinGas analytics platform (100+ traders across NY,
-                  London, and Düsseldorf) to Azure Container Apps with GitHub Actions CI/CD;
-                  powers live positions, P&amp;L, and fundamentals dashboards driving gas
-                  trading decisions.
+                  Leading migration of the desk&apos;s analytics platform (used by traders
+                  across NY, London, and Düsseldorf) to Azure Container Apps with GitHub
+                  Actions CI/CD; powers the trading dashboards and decision-support tooling
+                  the desk uses day to day.
                 </li>
                 <li>
-                  Built Python/SQL pipelines in Snowflake ingesting millions of rows daily from
-                  vendor feeds (Enverus, LSEG, Kpler) covering production, storage, and pipeline
-                  flows, underpinning the desk&apos;s view on basis spreads and seasonal
-                  positioning.
+                  Built Python/SQL pipelines in Snowflake ingesting daily feeds from
+                  third-party commodity data vendors covering production, storage, and
+                  pipeline flows.
                 </li>
                 <li>
-                  Developed ML-based anomaly detection across 216 North American gas pipelines,
-                  flagging flow shifts the desk investigates for basis and locational trading;
-                  built a backtesting framework to validate seasonal strategies before deploying
-                  capital.
+                  Developed ML-based anomaly detection on North American natural gas pipeline
+                  flows, surfacing unusual patterns for desk investigation; built a
+                  backtesting framework that validates fundamental and seasonal trading
+                  hypotheses before they touch capital.
                 </li>
                 <li>
-                  Built AI research agents (LangGraph, MCP) compiling daily intelligence on key
-                  oil-producing regions, surfacing supply dynamics that influence global LNG
-                  flows and US gas exports.
+                  Built AI research agents (LangGraph, MCP) compiling daily intelligence on
+                  key oil-producing regions to inform LNG flow and gas-export views.
                 </li>
               </ul>
             </article>
