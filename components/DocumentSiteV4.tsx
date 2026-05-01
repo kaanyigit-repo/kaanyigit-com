@@ -225,33 +225,39 @@ export function DocumentSiteV4({ photoUrl = "/portrait.jpg" }: Props) {
           <div className="doc4-projects">
             <article className="doc4-card c1">
               <span className="doc4-card-num">01</span>
-              <h3>Seasonal natural gas backtesting DSL</h3>
+              <h3>Trading-desk tools at Uniper Global Commodities</h3>
               <div className="doc4-card-tag">
-                Uniper Global Commodities<span className="dot">·</span>2025–present
-                <span className="dot">·</span>Python, Snowflake
+                Trading Analyst &amp; Developer<span className="dot">·</span>NY
+                <span className="dot">·</span>2024–present
+                <span className="dot">·</span>Python, Snowflake, Azure
               </div>
               <p>
-                A small DSL the desk uses to express seasonal trading ideas (storage arb,
-                weather-driven demand, basis between hubs) as typed strategies that get checked
-                at compile time, before any market data is loaded.
+                I build the production code, data pipelines, and ML systems behind the desk.
+                The day-to-day is <strong>FinGas</strong>, the analytics platform 100+ traders
+                use across NY, London, and Düsseldorf, and the Snowflake pipelines that feed it
+                (Enverus, LSEG, Kpler, millions of rows daily on production, storage, and
+                pipeline flows).
               </p>
               <p>
-                The win has been the kills: ideas that survive a meeting often don&apos;t survive
-                a clean backtest, and the framework makes the kill cheap. We open fewer notebooks
-                and close more conversations.
+                On top of that sits the work I find more interesting: an ML anomaly detector
+                across <strong>216 North American gas pipelines</strong> that flags flow shifts
+                the desk investigates for basis and locational trading, a typed{" "}
+                <strong>backtesting DSL</strong> the desk uses to kill bad seasonal ideas before
+                they touch capital, and Azure AI Foundry research agents (LangGraph + MCP)
+                compiling daily briefings on key oil-producing regions.
               </p>
               <div className="doc4-card-stats">
                 <div className="doc4-stat">
-                  <span className="doc4-stat-k">Markets</span>
-                  <span className="doc4-stat-v">NA NG · TTF</span>
+                  <span className="doc4-stat-k">Pipelines</span>
+                  <span className="doc4-stat-v">216</span>
                 </div>
                 <div className="doc4-stat">
-                  <span className="doc4-stat-k">History</span>
-                  <span className="doc4-stat-v">10y</span>
+                  <span className="doc4-stat-k">Traders</span>
+                  <span className="doc4-stat-v">100+</span>
                 </div>
                 <div className="doc4-stat">
-                  <span className="doc4-stat-k">Year</span>
-                  <span className="doc4-stat-v">2025</span>
+                  <span className="doc4-stat-k">Offices</span>
+                  <span className="doc4-stat-v">NY · LDN · DUS</span>
                 </div>
               </div>
             </article>
