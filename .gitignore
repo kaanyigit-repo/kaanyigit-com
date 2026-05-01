@@ -43,3 +43,6 @@ next-env.d.ts
 /Kaan_CV_*.pdf
 /kaanpp.*
 /portrait_source.*
+
+# Local preview artifacts
+/og-preview.png
