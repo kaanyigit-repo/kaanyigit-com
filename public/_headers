@@ -1,0 +1,6 @@
+# Force image/png on the Next.js generated OG route. Without this Cloudflare
+# defaults to application/octet-stream because the path has no .png extension,
+# and link-preview services (iMessage, Slack, LinkedIn) refuse to render it.
+/opengraph-image
+  Content-Type: image/png
+  Cache-Control: public, max-age=86400
