@@ -59,9 +59,9 @@ export default function RootLayout({
     >
       <head>
         <script
-          // Set theme + accent before paint so persisted choices apply with no flash.
+          // Set theme before paint so persisted choice applies with no flash.
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.dataset.theme=t;}var a=localStorage.getItem('accent');if(a){document.documentElement.dataset.accent=a;}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.dataset.theme=t;}}catch(e){}})();`,
           }}
         />
       </head>

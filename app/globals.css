@@ -36,12 +36,6 @@ body {
   --rule-2: rgba(232, 226, 212, 0.08);
 }
 
-/* Accent palette swaps. Default (no attr) is ember from :root above. */
-:root[data-accent="ember"]   { --accent: oklch(0.62 0.13 50); }
-:root[data-accent="crimson"] { --accent: oklch(0.50 0.17 25); }
-:root[data-accent="olive"]   { --accent: oklch(0.55 0.10 110); }
-:root[data-accent="cobalt"]  { --accent: oklch(0.50 0.14 250); }
-:root[data-accent="mono"]    { --accent: var(--ink); }
 
 body {
   background: var(--paper);
@@ -968,8 +962,7 @@ a.doc-pill:hover {
   z-index: 50;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 6px 10px;
+  padding: 4px 6px;
   background: color-mix(in oklab, var(--paper) 88%, transparent);
   backdrop-filter: blur(8px) saturate(1.1);
   -webkit-backdrop-filter: blur(8px) saturate(1.1);
@@ -977,33 +970,9 @@ a.doc-pill:hover {
   border-radius: 999px;
   font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
-.theme-controls-accents {
-  display: flex;
-  gap: 6px;
-}
-.theme-controls-swatch {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  cursor: pointer;
-  padding: 0;
-  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
-}
-.theme-controls-swatch:hover {
-  transform: scale(1.18);
-}
-.theme-controls-swatch.is-active {
-  transform: scale(1.1);
-  border-color: var(--ink);
-  box-shadow: 0 0 0 1px var(--paper) inset;
-}
-:root[data-theme="dark"] .theme-controls-swatch {
-  border-color: rgba(255, 255, 255, 0.22);
-}
 .theme-controls-toggle {
   background: transparent;
-  border: 1px solid var(--rule);
+  border: none;
   color: var(--ink-mute);
   font-family: inherit;
   font-size: 10px;
@@ -1012,23 +981,16 @@ a.doc-pill:hover {
   padding: 4px 10px;
   border-radius: 999px;
   cursor: pointer;
-  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  transition: color 0.15s, background 0.15s;
 }
 .theme-controls-toggle:hover {
   color: var(--ink);
-  border-color: var(--accent);
   background: var(--rule-2);
 }
 @media (max-width: 520px) {
   .theme-controls {
     top: 10px;
     right: 10px;
-    padding: 5px 8px;
-    gap: 8px;
-  }
-  .theme-controls-swatch {
-    width: 12px;
-    height: 12px;
   }
 }
 
