@@ -260,6 +260,9 @@ export function DocumentSiteV4({ photoUrl = "/portrait.jpg" }: Props) {
                   <span className="doc4-stat-v">NY · LDN · DUS</span>
                 </div>
               </div>
+              <span className="doc4-card-internal">
+                Internal · production code, not public
+              </span>
             </article>
 
             <article className="doc4-card c2">
