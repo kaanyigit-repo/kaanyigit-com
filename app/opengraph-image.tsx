@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const dynamic = "force-static";
 export const alt =
@@ -6,7 +8,20 @@ export const alt =
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+async function loadFont(filename: string): Promise<ArrayBuffer> {
+  const buffer = await readFile(join(process.cwd(), "public", "fonts", filename));
+  return buffer.buffer.slice(
+    buffer.byteOffset,
+    buffer.byteOffset + buffer.byteLength
+  );
+}
+
 export default async function OpengraphImage() {
+  const [fraunces, frauncesItalic] = await Promise.all([
+    loadFont("Fraunces-SemiBold.ttf"),
+    loadFont("Fraunces-SemiBoldItalic.ttf"),
+  ]);
+
   return new ImageResponse(
     (
       <div
@@ -18,7 +33,7 @@ export default async function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "60px 88px 72px",
-          fontFamily: "Georgia, 'Times New Roman', serif",
+          fontFamily: "Fraunces",
         }}
       >
         {/* Top: brand mark */}
@@ -27,7 +42,7 @@ export default async function OpengraphImage() {
             display: "flex",
             alignItems: "center",
             gap: 12,
-            fontFamily: "ui-monospace, 'Courier New', monospace",
+            fontFamily: "monospace",
             fontSize: 22,
             color: "#8a8278",
             letterSpacing: "0.06em",
@@ -44,34 +59,32 @@ export default async function OpengraphImage() {
           kaanyigit.com
         </div>
 
-        {/* Center: bigname. Lines tight, container holds buffer below for italic g descender. */}
+        {/* Center: bigname */}
         <div style={{ display: "flex", flexDirection: "column", marginBottom: 90 }}>
           <div
             style={{
-              fontSize: 158,
+              fontSize: 168,
               lineHeight: 0.95,
               letterSpacing: "-0.045em",
               color: "#1a1612",
-              fontWeight: 500,
             }}
           >
             Kaan
           </div>
           <div
             style={{
-              fontSize: 158,
+              fontSize: 168,
               lineHeight: 0.95,
               letterSpacing: "-0.045em",
               color: "#c87639",
               fontStyle: "italic",
-              fontWeight: 500,
             }}
           >
             Yigit.
           </div>
         </div>
 
-        {/* Bottom: subhead, comfortably below the descender */}
+        {/* Bottom: subhead */}
         <div
           style={{
             display: "flex",
@@ -81,7 +94,7 @@ export default async function OpengraphImage() {
         >
           <div
             style={{
-              fontFamily: "ui-monospace, 'Courier New', monospace",
+              fontFamily: "monospace",
               fontSize: 26,
               color: "#1a1612",
               letterSpacing: "0.01em",
@@ -91,7 +104,7 @@ export default async function OpengraphImage() {
           </div>
           <div
             style={{
-              fontFamily: "ui-monospace, 'Courier New', monospace",
+              fontFamily: "monospace",
               fontSize: 18,
               color: "#8a8278",
               letterSpacing: "0.12em",
@@ -103,6 +116,22 @@ export default async function OpengraphImage() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        {
+          name: "Fraunces",
+          data: fraunces,
+          weight: 600,
+          style: "normal",
+        },
+        {
+          name: "Fraunces",
+          data: frauncesItalic,
+          weight: 600,
+          style: "italic",
+        },
+      ],
+    }
   );
 }
