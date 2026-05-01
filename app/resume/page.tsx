@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: "Resume · Kaan Yigit",
   description:
     "Trading Analyst & Developer at Uniper Global Commodities. Experience, education, projects, and publications.",
+  alternates: {
+    canonical: "/resume",
+  },
+  openGraph: {
+    title: "Resume · Kaan Yigit",
+    description:
+      "Trading Analyst & Developer at Uniper Global Commodities. Experience, education, projects, and publications.",
+    type: "profile",
+    url: "https://kaanyigit.com/resume",
+    siteName: "kaanyigit.com",
+  },
 };
 
 const BACKEND_STACK = [

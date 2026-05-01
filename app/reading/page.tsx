@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: "Reading · Kaan Yigit",
   description:
     "Newsletters, Substacks, and the occasional book I keep coming back to. Sorted by category.",
+  alternates: {
+    canonical: "/reading",
+  },
+  openGraph: {
+    title: "Reading · Kaan Yigit",
+    description:
+      "Newsletters, Substacks, and the occasional book I keep coming back to. Sorted by category.",
+    type: "website",
+    url: "https://kaanyigit.com/reading",
+    siteName: "kaanyigit.com",
+  },
 };
 
 type Item = {

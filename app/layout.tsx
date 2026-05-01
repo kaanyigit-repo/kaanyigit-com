@@ -38,11 +38,17 @@ export const metadata: Metadata = {
   description:
     "Software engineer working on a commodities trading desk. Currently shipping data systems, open to interesting conversations.",
   metadataBase: new URL("https://kaanyigit.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Kaan Yigit",
     description:
       "Software engineer working on a commodities trading desk. Currently shipping data systems.",
     type: "website",
+    url: "https://kaanyigit.com",
+    siteName: "kaanyigit.com",
+    locale: "en_US",
   },
 };
 
